@@ -1,0 +1,43 @@
+//variables
+
+$website-width: 1280px;
+$light-color: rgb(241, 241, 241);
+$medium-color: #e5c641;
+$main-color: #f48938;
+$dark-color: #be9dc6;
+$primary-color: #f48938;
+
+//PROJECT 1
+$project-medium-color: #b1dcff;
+$project-main-color: #1f79df;
+$project-light-color: rgb(220, 220, 220);
+$project-dark-color: rgb(0, 0, 0);
+
+//PROJECT 2
+$project-secondary-color: #fd0217;
+$project-primary-color: #eac2c1;
+$project-third-color: #fdf3e4;
+
+$project-blue-dark: #2b8eff;
+$project-blue-medium: #479dff;
+$project-blue-mid: #6eb2ff;
+$project-blue-light: #8ac1ff;
+
+// $project-dark-color: #64b9ed;
+
+// #f48938
+
+// $project-main-color: #000000ef;
+// $project-medium-color: #eeeeee;
+// $project-light-color: #fff;
+// $project-dark-color: rgb(110, 143, 248);
+
+//set Text Color
+
+@function set-text-color($color) {
+  @if (lightness($color) >50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

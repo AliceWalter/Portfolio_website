@@ -1,0 +1,384 @@
+//Import media queries
+@import "media";
+
+//UTILITIES
+
+.casestudy-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0rem;
+  padding: 2rem 2rem;
+}
+.casestudy-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2rem 0rem;
+  padding: 4rem 2rem;
+}
+
+.image-media {
+  display: none;
+}
+
+.column {
+  padding: 0.3rem 1rem;
+}
+.column-75 {
+  width: 60%;
+  padding: 0.3rem 0.5rem;
+}
+
+.column-50 {
+  width: 50%;
+  padding: 0.3rem 1rem;
+}
+
+.column-25 {
+  width: 40%;
+  padding: 0.3rem 0.5rem;
+}
+.column-third {
+  width: 33.3%;
+  padding: 1rem 1rem;
+}
+
+.img-frame {
+  width: 100%;
+  object-fit: cover;
+}
+
+//HEADER-COLORS
+
+.header-1 {
+  background: $project-main-color;
+  color: $project-third-color;
+}
+.header-2 {
+  background: $project-blue-dark;
+  color: $project-third-color;
+}
+.header-3 {
+  background: $project-blue-medium;
+  color: $project-third-color;
+}
+.header-4 {
+  background: $project-blue-mid;
+  color: $project-third-color;
+}
+.header-5 {
+  background: $project-blue-light;
+  color: $project-main-color;
+}
+.header-6 {
+  background: $project-medium-color;
+  color: $project-main-color;
+}
+
+//CASESTUDIES
+
+//PROGRESS INDICATOR
+#progress-indicator {
+  margin: 1rem 0rem 8rem 0rem;
+}
+
+#progress-nav {
+  display: flex;
+  position: absolute, 0;
+  justify-content: space-evenly;
+  align-items: center;
+
+  ul {
+    display: flex;
+  }
+  li {
+    padding: 0 0.5rem;
+  }
+}
+
+//PROGRESS BUTTONS
+
+.progress-step {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-right: 2px white solid;
+  border-top: 2px white solid;
+  // transition: all 1s;
+}
+
+.progress-techniques {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+  padding: 2rem 1rem;
+  width: 160px;
+  text-transform: uppercase;
+  font-size: bolder;
+
+  &:hover {
+    background: white;
+    color: black;
+    border: 2px black solid;
+
+    .progress-step {
+      background: black;
+      color: white;
+      border: 1px black solid;
+    }
+  }
+}
+
+//CASESTUDY HEADERS
+
+//process-step
+.process-step {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 30px;
+  font-weight: bolder;
+  border-radius: 0%;
+  height: 50px;
+  width: 70px;
+  line-height: 50px;
+  text-align: center;
+  border-top: 5px $light-color solid;
+  border-right: 5px $light-color solid;
+}
+
+//process-icon
+.process-techniques {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  padding: 3rem 1rem;
+  margin: 0;
+  // border: 2px $light-color solid;
+}
+
+.header {
+  display: block;
+  padding: 1rem 2rem 1rem 1rem;
+  margin: 0.3rem 0rem;
+}
+
+//CURRENT APP  - POSTCARD APP
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  h6 {
+    color: $project-main-color;
+    font-weight: bolder;
+    text-align: left;
+    font-size: 10px;
+  }
+}
+
+// COMPETTITVE BENCHMARKING - FLYUX
+
+.box-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+
+  h6 {
+    color: #64b9ed;
+    font-weight: bolder;
+  }
+}
+
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//RESULTS  - (postcard reviews and Flyux Surveys)
+
+.results {
+  display: grid;
+  grid-template-columns: repeat;
+  grid-gap: 5rem;
+  strong {
+    font-size: 30px;
+  }
+}
+
+.result-1 {
+  // grid-area: result-1;
+  text-align: left;
+  color: $project-primary-color;
+}
+.result-2 {
+  // grid-area: result-2;
+  text-align: right;
+  color: $project-medium-color;
+}
+.result-3 {
+  // grid-area: result-3;
+  text-align: left;
+  color: $project-secondary-color;
+}
+.result-4 {
+  // grid-area: result-4;
+  text-align: right;
+  color: #be9dc6;
+}
+.result-5 {
+  // grid-area: result-5;
+  text-align: left;
+  color: $project-main-color;
+}
+.result-6 {
+  // grid-area: result-6;
+  text-align: right;
+  color: $project-primary-color;
+}
+.result-7 {
+  // grid-area: result-7;
+  text-align: left;
+  color: $project-medium-color;
+}
+
+//INTERVIEWS AND USABILITY TEST - Postcard & FlyUX
+
+.comment-grid {
+  display: grid;
+  grid-template-columns: repeat;
+  // "comment-1 comment-1 comment-2 comment-3"
+  // "comment-4 comment-5 comment-5 comment-6"
+  // "comment-7 comment-7 comment-8 comment-8"
+  // "comment-9 comment-9 comment-9 comment-10"
+  // "comment-11 comment-11 comment-12 comment-12";
+  grid-gap: 4rem;
+  font-weight: bold;
+  padding-bottom: 2rem;
+  strong {
+    font-size: 30px;
+  }
+}
+
+//grid-areas
+
+.comment-1 {
+  // grid-area: comment-1;
+  text-align: left;
+  color: $project-primary-color;
+}
+.comment-2 {
+  // grid-area: comment-2;
+  text-align: right;
+  color: $project-medium-color;
+}
+.comment-3 {
+  // grid-area: comment-3;
+  text-align: left;
+  color: $project-main-color;
+}
+.comment-4 {
+  // grid-area: comment-4;
+  text-align: right;
+  color: #be9dc6;
+}
+
+.comment-5 {
+  // grid-area: comment-5;
+  text-align: left;
+  color: $project-secondary-color;
+}
+.comment-6 {
+  // grid-area: comment-6;
+  text-align: right;
+  color: $project-primary-color;
+}
+.comment-7 {
+  // grid-area: comment-7;
+  text-align: left;
+  color: $project-main-color;
+}
+.comment-8 {
+  // grid-area: comment-8;
+  text-align: right;
+  color: #be9dc6;
+}
+.comment-9 {
+  // grid-area: comment-9;
+  text-align: left;
+  color: $project-medium-color;
+}
+.comment-10 {
+  // grid-area: comment-10;
+  text-align: right;
+  color: $project-secondary-color;
+}
+.comment-11 {
+  // grid-area: comment-11;
+  text-align: left;
+  color: #eac2c1;
+}
+
+.comment-12 {
+  // grid-area: comment-12;
+  text-align: right;
+  color: $project-main-color;
+}
+
+//EMPATHY-MAP -POSTCARD
+
+.empathy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  img {
+    height: 100%;
+  }
+}
+//SKETCH-FLYUX
+
+.sketch-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  grid-gap: 2rem;
+  align-items: center;
+}
+
+//SKETCHES - POSTCARD
+
+.sketch-postcard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 2rem;
+  align-items: center;
+}
+
+//INTERACTION DESIGN- FLYUX
+
+#interaction-design {
+  .container {
+    margin-bottom: 3rem;
+  }
+}
+
+//ANNOTED IMAGES (BOTH)
+
+.annoted-grid {
+  display: grid;
+  grid-template-columns: repeat;
+}

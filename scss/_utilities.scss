@@ -1,0 +1,332 @@
+.container {
+  max-width: $website-width;
+  padding: 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+//Import media queries
+@import "media";
+
+//Buttons
+
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  // transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: $project-secondary-color;
+    background: $project-primary-color;
+  }
+  &-light {
+    @extend %btn-shared;
+    color: #333;
+    background: $light-color;
+  }
+  &-dark {
+    @extend %btn-shared;
+    color: #fff;
+    background: $dark-color;
+  }
+  &-home-1,
+  &-home-2,
+  &-home-3 {
+    @extend %btn-shared;
+    margin: 1rem;
+  }
+}
+
+.btn-home-1 {
+  background: $project-secondary-color;
+  color: $project-primary-color;
+  font-weight: bold;
+  border: 1px $project-secondary-color solid;
+}
+
+.btn-home-2 {
+  background: $project-medium-color;
+  color: $project-main-color;
+  font-weight: bold;
+  border: 1px $project-medium-color solid;
+}
+
+.btn-home-3 {
+  background: $project-primary-color;
+  color: $project-secondary-color;
+  font-weight: bold;
+  border: 1px $project-primary-color solid;
+}
+
+.btn-home-1:hover {
+  color: black;
+  background: white;
+  border: 1px black solid;
+  margin: 1rem;
+}
+
+.btn-home-2:hover {
+  color: black;
+  background: white;
+  border: 1px black solid;
+  margin: 1rem;
+}
+
+.btn-home-3:hover {
+  color: black;
+  background: white;
+  border: 1px black solid;
+  margin: 1rem;
+}
+
+.btn-main:hover {
+  background: $project-secondary-color;
+  color: $project-primary-color;
+  border: 1px $project-primary-color solid;
+}
+
+//input[class^="btn-"]:hover,
+//a[class^="btn-"]:hover {
+//  background: $main-color;
+//}
+
+//backgrounds
+
+.bg {
+  &-main {
+    background: $main-color;
+    color: set-text-color($main-color);
+  }
+  &-dark {
+    background: $dark-color;
+    color: set-text-color($dark-color);
+  }
+  &-light {
+    background: $light-color;
+    color: set-text-color($light-color);
+  }
+  &-medium {
+    background: $medium-color;
+    color: set-text-color($medium-color);
+  }
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.6rem;
+  font-weight: lighter;
+}
+
+.p-small {
+  font-size: 12px;
+  line-height: 1.6rem;
+}
+h1 {
+  font-size: 200px;
+  line-height: 200px;
+}
+
+h2 {
+  font-size: 45px;
+  line-height: 6rem;
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 3.5rem;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 35px;
+  line-height: 2.5rem;
+}
+
+h5 {
+  font-size: 30px;
+  line-height: 2.5rem;
+}
+
+h6 {
+  font-size: 25px;
+  line-height: 2.5rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+h7 {
+  font-size: 20px;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+}
+
+.heading {
+  font-size: 40px;
+  text-align: left;
+}
+img {
+  width: 100%;
+  height: 50%;
+}
+
+.lead {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  color: black;
+}
+
+.lead-light {
+  font-size: 30px;
+  font-weight: lighter;
+  line-height: 2.5rem;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+.text-light {
+  font-weight: lighter;
+}
+
+//Padding
+
+.py {
+  &-0 {
+    padding: 0.2rem 0;
+  }
+  &-1 {
+    padding: 0.5rem 0;
+  }
+  &-2 {
+    padding: 0.75rem 0;
+  }
+  &-3 {
+    padding: 1rem 0;
+  }
+  &-4 {
+    padding: 1.25rem 0;
+  }
+  &-5 {
+    padding: 1rem 0 0rem 0;
+  }
+  &-6 {
+    padding: 2rem 0 0rem 0;
+  }
+}
+//Margin
+
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+  &-2 {
+    margin: 2rem 0;
+  }
+  &-3 {
+    margin: 3rem 0;
+  }
+  &-4 {
+    margin: 4rem 0;
+  }
+}
+
+.section-title {
+  font-size: 35px;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.bottom-line {
+  height: 3px;
+  width: 15rem;
+  background: black;
+  display: block;
+  margin: 0 5rem auto 2rem auto;
+}
+
+.bottom-line-large {
+  height: 3px;
+  width: 25rem;
+  background: $project-main-color;
+  display: block;
+  margin: 0 5rem auto 2rem auto;
+  padding: 0 2rem;
+}
+
+.bottom-line-small {
+  height: 2px;
+  width: 15px;
+  background: black;
+  margin: 3rem 1rem 15rem 1rem;
+}
+
+// CATEGORYS
+
+.category {
+  display: inline-block;
+  color: White;
+  padding: 1rem 6rem 2rem 6rem;
+  margin: 1rem 2rem;
+  background: #0a9cdd;
+  // border: 1px black solid;
+}
+
+.category-light {
+  display: flex;
+  color: black;
+  padding: 2rem 2rem;
+  margin: 0 3rem 0 1rem;
+  border-radius: 0px;
+  margin-bottom: 0.5rem;
+  background: $primary-color;
+  word-spacing: normal;
+  // border: 1px black solid;
+}
+
+.category-dark {
+  display: block;
+  color: #fdedd5;
+  padding: 1rem 1rem 1rem 1rem;
+  margin: 0.3rem 0rem;
+  background: #0d60d4;
+}
+.category-bright {
+  display: block;
+  color: $project-secondary-color;
+  padding: 1rem 1rem 1rem 1rem;
+  margin: 0.3rem 0rem;
+  background: $project-primary-color;
+}
+.category-primary {
+  display: block;
+  color: $project-main-color;
+  padding: 1rem 1rem 1rem 1rem;
+  margin: 0.3rem 0rem;
+  background: $project-medium-color;
+}
+.category-secondary {
+  display: block;
+  color: black;
+  padding: 1rem 1rem 1rem 1rem;
+  margin: 0.3rem 0rem;
+  background: $project-secondary-color;
+}
+
+.card {
+  background: $light-color;
+  margin: 0rem 0 10rem 0;
+}
